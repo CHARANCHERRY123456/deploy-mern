@@ -2,7 +2,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
 const bodyParser = require("body-parser");
+require('dotenv').config();
 const app = express();
+app.use(bodyParser.json());
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
@@ -35,7 +37,9 @@ app.post('/add-user', async (req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT,'0.0.0.0', () => {
-  console.log(`Server is running on port ${PORT}`);
+const server = app.listen(port, '0.0.0.0', () => {
+  console.log(`Server running on port ${port}`);
 });
 
+server.keepAliveTimeout = 120000; // 120 seconds
+server.headersTimeout = 120000; // 120 seconds
