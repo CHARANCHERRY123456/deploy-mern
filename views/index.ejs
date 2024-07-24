@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Node App</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>Welcome to My Node.js App!</h1>
+  <p>This is a simple Node.js application with MongoDB integration deployed on Render.</p>
+  <form action="/add-user" method="POST">
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <button type="submit">Add User</button>
+  </form>
+  <h2>Users:</h2>
+  <ul>
+    <% users.forEach(user => { %>
+      <li><%= user.name %> (<%= user.email %>)</li>
+    <% }) %>
+  </ul>
+</body>
+</html>
+
