@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 
 // MongoDB connection
-mongoose.connect('mongodb://localhost:27017/mytestdb').then(() => {
+mongoose.connect('mongodb://localhost:27017/mongodb+srv://cherrycharan238:CHERRYCHARAN2380@cluster0.tavn5wb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0.mongodb.net/mydatabase?retryWrites=true&w=majority').then(() => {
   console.log('MongoDB connected...');
 }).catch(err => {
   console.error('Connection error', err.message);
