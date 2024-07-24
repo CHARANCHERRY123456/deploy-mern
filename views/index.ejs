@@ -16,10 +16,11 @@
   </form>
   <h2>Users:</h2>
   <ul>
+    <% if(locals.users){ %>
     <% users.forEach(user => { %>
       <li><%= user.name %> (<%= user.email %>)</li>
-    <% }) %>
+    <% })} %>
+    
   </ul>
 </body>
 </html>
-
