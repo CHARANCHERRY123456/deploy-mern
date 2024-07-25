@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 
 // MongoDB connection
-mongoose.connect("mongodb+srv://cherrycharan238:CHERRYCHARAN2380@cluster0.tavn5wb.mongodb.net/").then(() => {
+mongoose.connect("mongodb+srv://cherrycharan238:CHERRYCHARAN2380@cluster0.tavn5wb.mongodb.net/new_db").then(() => {
   console.log('MongoDB connected...');
 }).catch(err => {
   console.error('Connection error', err.message);
