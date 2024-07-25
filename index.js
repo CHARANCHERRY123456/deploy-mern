@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 
 // MongoDB connection
-mongoose.connect('mongodb+srv://cherrycharan238:CHERRYCHARAN2380@cluster0.tavn5wb.mongodb.net/rendering?retryWrites=true&w=majority').then(() => {
+mongoose.connect("mongodb+srv://cherrycharan238:CHERRYCHARAN2380@cluster0.tavn5wb.mongodb.net/").then(() => {
   console.log('MongoDB connected...');
 }).catch(err => {
   console.error('Connection error', err.message);
@@ -36,7 +36,7 @@ app.post('/add-user', async (req, res) => {
   });
 });
 
-const PORT = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 const server = app.listen(port, '0.0.0.0', () => {
   console.log(`Server running on port ${port}`);
 });
